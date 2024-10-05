@@ -38,7 +38,7 @@ CUSTOM_CAPTION = environ.get('CUSTOM_CAPTION')
 class Config(object):
 	API_ID = int(os.environ.get("API_ID", 24746290))
 	API_HASH = os.environ.get("API_HASH", "3043e3055ae0c44b869cec8e1754a6ed")
-	BOT_TOKEN = os.environ.get("BOT_TOKEN","")
+	BOT_TOKEN = os.environ.get("BOT_TOKEN","7765219385:AAFCfgLw_DNITaASOYCP_Cjb1a5JKhHColA")
 	BOT_USERNAME = os.environ.get("BOT_USERNAME" , "SpiritsHentaiShareBot")
 	DB_CHANNEL = int(os.environ.get("DB_CHANNEL", -1002431689237))
 	BOT_OWNER = int(os.environ.get("BOT_OWNER", "5260143179"))
