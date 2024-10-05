@@ -32,7 +32,7 @@ async def handle_force_sub(bot: Client, cmd: Message):
         if user.status == "kicked":
             await bot.send_message(
                 chat_id=cmd.from_user.id,
-                text="Sorry baby, You are Banned to use me. Contact my [Support Group](https://t.me/LazyDeveloperSupport).",
+                text="Sᴏʀʀʏ ʙᴀʙʏ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴍᴇ. Cᴏɴᴛᴀᴄᴛ ᴍᴇ [Contact Me](https://t.me/sadspirit7).",
                 disable_web_page_preview=True
             )
             return 400
@@ -40,19 +40,19 @@ async def handle_force_sub(bot: Client, cmd: Message):
         try:
             invite_link = await get_invite_link(bot, chat_id=channel_chat_id)
         except Exception as err:
-            print(f"ᴜɴᴀʙʟᴇ ᴛᴏ ᴅᴏ ꜰᴏʀᴄᴇ ꜱᴜʙꜱᴄʀɪʙᴇ ᴛᴏ {Config.UPDATES_CHANNEL}\n\nError: {err}")
+            print(f"Uɴᴀʙʟᴇ Tᴏ Dᴏ Fᴏʀᴄᴇ Sᴜʙsᴄʀɪʙᴇ Tᴏ {Config.UPDATES_CHANNEL}\n\nError: {err}")
             return 200
         await bot.send_message(
             chat_id=cmd.from_user.id,
-            text="**𝙋𝙡𝙚𝙖𝙨𝙚 𝙅𝙤𝙞𝙣 𝙈𝙮 𝙐𝙥𝙙𝙖𝙩𝙚𝙨 𝘾𝙝𝙖𝙣𝙣𝙚𝙡 𝙩𝙤 𝙪𝙨𝙚 𝙩𝙝𝙞𝙨 𝘽𝙤𝙩!**\n\n"
-                 "ᴅᴜᴇ ᴛᴏ ᴏᴠᴇʀʟᴏᴀᴅ, ᴏɴʟʏ ᴄʜᴀɴɴᴇʟ ꜱᴜʙꜱᴄʀɪʙᴇʀꜱ ᴄᴀɴ ᴜꜱᴇ ᴛʜᴇ ʙᴏᴛ!",
+            text="**Pʟᴇᴀsᴇ Jᴏɪɴ Mʏ Cʜᴀɴɴᴇʟ Tᴏ Usᴇ Tʜɪs Bᴏᴛ**\n\n"
+                 "Dᴜᴇ Tᴏ Pʀɪᴠᴀᴄʏ, Oɴʟʏ Cʜᴀɴɴᴇʟ Sᴜʙsᴄʀɪʙᴇʀs Usᴇ Tʜɪs Bᴏᴛ",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🤖 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ", url=invite_link.invite_link)
+                        InlineKeyboardButton("Jᴏɪɴ Cʜᴀɴɴᴇʟ", url=invite_link.invite_link)
                     ],
                     [
-                        InlineKeyboardButton("🔄 ʀᴇꜰʀᴇꜱʜ 🔄", callback_data="refreshForceSub")
+                        InlineKeyboardButton("Rᴇғʀᴇsʜ", callback_data="refreshForceSub")
                     ]
                 ]
             )
@@ -61,7 +61,7 @@ async def handle_force_sub(bot: Client, cmd: Message):
     except Exception:
         await bot.send_message(
             chat_id=cmd.from_user.id,
-            text="ꜱᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ. ᴄᴏɴᴛᴀᴄᴛ ᴍʏ [ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ](https://t.me/LazyDeveloperSupport).",
+            text="Sᴏᴍᴇᴛʜɪɴɢ Wᴇɴᴛ Wʀᴏɴɢ Cᴏɴᴛᴀᴄᴛ Mʏ [Sᴘɪʀɪᴛs Cʜᴀᴛ Gʀᴏᴜᴘ](https://t.me/anime_help_group).",
             disable_web_page_preview=True
         )
         return 200
